@@ -22,12 +22,16 @@ always begin  slowest_sync_clk=1'b1; #5;  slowest_sync_clk=1'b0; #5;    end     
 
 
 initial begin
-ext_reset_in=1'b1;
-#70;
+
 ext_reset_in=1'b0;
-#70;
+#100;
 ext_reset_in=1'b1;
-#50;
+#2000;
+
+ext_reset_in=1'b0;
+#100;
+ext_reset_in=1'b1;
+#2000;
 
 
 end
